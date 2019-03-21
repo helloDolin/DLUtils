@@ -6,16 +6,16 @@
 //  Copyright © 2017年 shaolin. All rights reserved.
 //
 
-#import "BlockAlertView.h"
+#import "DLBlockAlertView.h"
 
-@interface BlockAlertView()<UIAlertViewDelegate>
+@interface DLBlockAlertView()<UIAlertViewDelegate>
 
 @property (nonatomic, copy) void (^cancelBlock)(void);
 @property (nonatomic, copy) void (^confirmBlock)(void);
 
 @end
 
-@implementation BlockAlertView
+@implementation DLBlockAlertView
 
 - (id)initWithTitle:(NSString *)title message:(NSString *)message cancelButtonWithTitle:(NSString *)cancelTitle cancelBlock:(void (^)(void))cancelBlock confirmButtonWithTitle:(NSString *)confirmTitle confirmBlock:(void (^)(void))confirmBlock {
     self = [super initWithTitle:title message:message delegate:self cancelButtonTitle:cancelTitle otherButtonTitles:confirmTitle, nil];
@@ -32,7 +32,7 @@
            cancelBlock:(void(^)(void))cancelBlock
 confirmButtonWithTitle:(NSString*)confirmBtnTitle
           confirmBlock:(void(^)(void))confirmBlock {
-    BlockAlertView* blockAlertView = [[BlockAlertView alloc]initWithTitle:title
+    DLBlockAlertView* blockAlertView = [[DLBlockAlertView alloc]initWithTitle:title
                                                                   message:message
                                                     cancelButtonWithTitle:cancelBtnTitle
                                                               cancelBlock:cancelBlock

@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
   spec.homepage                 = "https://github.com/liaoshaolim/DLUtils"
   spec.license                  = { :type => 'MIT', :file => 'LICENSE' }
   spec.author                   = { "dolin" => "liaoshaolim@gmail.com" }
-  spec.social_media_url         = 'https://twitter.com/helloDolin'
+  spec.social_media_url         = 'https://twitter.com/hellodolin'
   spec.source                   = { :git => "https://github.com/liaoshaolim/DLUtils.git", :tag => spec.version }
   spec.ios.deployment_target    = '8.0'
   spec.requires_arc             = true
