@@ -9,5 +9,5 @@ Pod::Spec.new do |spec|
   spec.source                   = { :git => "https://github.com/liaoshaolim/DLUtils.git", :tag => "0.0.1" }
   spec.ios.deployment_target    = '8.0'
   spec.requires_arc             = true
-  spec.source_files             = "Classes/DolinUsefulMacros"
+  spec.source_files             = "Classes/DolinUsefulMacros.h"
 end
