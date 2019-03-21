@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name                     = "DLUtils"
-  spec.version                  = "0.0.1"
+  spec.version                  = "0.0.2"
   spec.summary                  = "DLUtils include some util"
   spec.homepage                 = "https://github.com/liaoshaolim/DLUtils"
   spec.license                  = { :type => 'MIT', :file => 'LICENSE' }
@@ -10,5 +10,4 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target    = '8.0'
   spec.requires_arc             = true
   spec.source_files             = "Classes/DolinUsefulMacros.h"
-  spec.pod_target_xcconfig      = { 'OTHER_LDFLAGS' => '-lObjC' }
 end
