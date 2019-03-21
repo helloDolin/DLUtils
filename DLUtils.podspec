@@ -6,7 +6,7 @@ Pod::Spec.new do |spec|
   spec.license                  = { :type => 'MIT', :file => 'LICENSE' }
   spec.author                   = { "dolin" => "liaoshaolim@gmail.com" }
   spec.social_media_url         = 'https://twitter.com/helloDolin'
-  spec.source                   = { :git => "https://github.com/liaoshaolim/DLUtils.git", :tag => "0.0.1" }
+  spec.source                   = { :git => "https://github.com/liaoshaolim/DLUtils.git", :tag => spec.version }
   spec.ios.deployment_target    = '8.0'
   spec.requires_arc             = true
   spec.source_files             = "Classes/DolinUsefulMacros.h"
