@@ -10,4 +10,5 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target    = '8.0'
   spec.requires_arc             = true
   spec.source_files             = "Classes/DolinUsefulMacros.h"
+  spec.pod_target_xcconfig      = { 'OTHER_LDFLAGS' => '-lObjC' }
 end
