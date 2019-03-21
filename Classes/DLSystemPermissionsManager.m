@@ -12,7 +12,8 @@
 #import <Photos/Photos.h>
 #import <AddressBookUI/AddressBookUI.h>
 #import <CoreLocation/CoreLocation.h>
-#import "DolinUsefulMacros.h"
+
+#define APP_NAME            [[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleName"]
 
 @interface DLSystemPermissionsManager() <CLLocationManagerDelegate>
 
