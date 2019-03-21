@@ -12,6 +12,7 @@
 #import <Photos/Photos.h>
 #import <AddressBookUI/AddressBookUI.h>
 #import <CoreLocation/CoreLocation.h>
+#import "DolinUsefulMacros.h"
 
 @interface DLSystemPermissionsManager() <CLLocationManagerDelegate>
 
@@ -71,7 +72,7 @@
  */
 - (BOOL)handleAddressBook {
     ABAuthorizationStatus authStatus = ABAddressBookGetAuthorizationStatus();
-    NSString *tips = [NSString stringWithFormat:@"请在iPhone的”设置-隐私-联系人“选项中，允许%@访问你的手机通讯录",[[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleName"]];
+    NSString *tips = [NSString stringWithFormat:@"请在iPhone的”设置-隐私-联系人“选项中，允许%@访问你的手机通讯录",APP_NAME];
     
     if (authStatus == kABAuthorizationStatusDenied) {
         [self executeAlterTips:tips isSupport:YES];
@@ -129,7 +130,7 @@
  */
 - (BOOL)handleAudioSession {
     if (![self canRecord]) {
-        NSString *tips = [NSString stringWithFormat:@"请在iPhone的”设置-隐私-麦克风“选项中，允许%@访问你的麦克风",[[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleName"]];
+        NSString *tips = [NSString stringWithFormat:@"请在iPhone的”设置-隐私-麦克风“选项中，允许%@访问你的麦克风",APP_NAME];
         [self executeAlterTips:tips isSupport:YES];
         return NO;
     }
@@ -150,7 +151,7 @@
         }
         // 用户已明确拒绝您的应用访问照片库
         else if(authorizationStatus == PHAuthorizationStatusDenied) {
-            NSString *tips = [NSString stringWithFormat:@"请在iPhone的”设置-隐私-相册“选项中，允许%@访问你的手机相册",[[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleName"]];
+            NSString *tips = [NSString stringWithFormat:@"请在iPhone的”设置-隐私-相册“选项中，允许%@访问你的手机相册",APP_NAME];
             [self executeAlterTips:tips isSupport:YES];
             return NO;
         }
@@ -185,7 +186,7 @@
         AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
         // 用户明确拒绝
         if (authStatus == ALAuthorizationStatusDenied) {
-            NSString *tips = [NSString stringWithFormat:@"请在iPhone的”设置-隐私-相机“选项中，允许%@访问你的手机相机",[[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleName"]];
+            NSString *tips = [NSString stringWithFormat:@"请在iPhone的”设置-隐私-相机“选项中，允许%@访问你的手机相机",APP_NAME];
             [self executeAlterTips:tips isSupport:YES];
             return NO;
         }
@@ -253,7 +254,7 @@
     CLAuthorizationStatus authStatus = CLLocationManager.authorizationStatus;
     if (authStatus == kCLAuthorizationStatusDenied ||
         authStatus == kCLAuthorizationStatusRestricted) {
-        NSString *tips = [NSString stringWithFormat:@"请在iPhone的”设置-隐私-定位“选项中，允许%@访问你的定位",[[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleName"]];
+        NSString *tips = [NSString stringWithFormat:@"请在iPhone的”设置-隐私-定位“选项中，允许%@访问你的定位",APP_NAME];
         [self executeAlterTips:tips isSupport:YES];
         return NO;
     }
