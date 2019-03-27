@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name                     = "DLUtils"
-  spec.version                  = "0.0.5"
+  spec.version                  = "0.0.6"
   spec.summary                  = "DLUtils include some util"
   spec.homepage                 = "https://github.com/liaoshaolim/DLUtils"
   spec.license                  = { :type => 'MIT', :file => 'LICENSE' }
